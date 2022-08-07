@@ -42,13 +42,26 @@ function getcityApi() {
                console.log(lat);
                console.log(lon);
 
-               var urlforcityData = 'https://api.openweathermap.org/data/3.0/onecall?lat=' + lat + '&lon=' + lon + "&appid==d2d3af92279205e005384f665435892b";
+               var urlforcityData = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + "&exclude=minutely,hourly,daily,alerts,&appid=d2d3af92279205e005384f665435892b";
 
                fetch(urlforcityData)
                .then(function (response) {
                 return response.json();
                })
 
-               .then(function (data))
+               .then(function (data) {
+                console.log(data);
+                for (var i = 0; i < data.length; index++) {
+
+                    var windSpeed = data[0].wind_speed;
+                    var humidity = data[0].humidity;
+                    var uvi = data[0].uvi;
+
+    
+                    
+                }
+                
+               
+               })
                 
             }})}

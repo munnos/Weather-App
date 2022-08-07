@@ -24,7 +24,7 @@ function getcityApi() {
 
     var placesearchValue = document.getElementById('place-input').value;
 
-    var requestUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + placesearchValue + "&limit=5&appid=d2d3af92279205e005384f665435892b";
+    var requestUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + placesearchValue + "&limit=1&appid=d2d3af92279205e005384f665435892b";
 
     console.log(requestUrl);
 
@@ -34,14 +34,21 @@ function getcityApi() {
         })
         .then(function (data) {
             console.log(data)
+            for (var i = 0; i < data.length; i++) {
 
-            for (var i = 0; index < data.length; i++) {
-                ;
+               var lat = data[0].lat;
+               var lon = data[0].lon;
+
+               console.log(lat);
+               console.log(lon);
+
+               var urlforcityData = 'https://api.openweathermap.org/data/3.0/onecall?lat=' + lat + '&lon=' + lon + "&appid==d2d3af92279205e005384f665435892b";
+
+               fetch(urlforcityData)
+               .then(function (response) {
+                return response.json();
+               })
+
+               .then(function (data))
                 
-            }
-        })
-
-    
-
-    // fetch(requestUrl)
-}
+            }})}

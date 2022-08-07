@@ -10,7 +10,10 @@
 </head>
 <body>
   <header class="header">Weather Dashboard</header>
-  <div class="container-fluid m-0 p-0">
+  <div class="container-fluid">
+    <div class="row align-items start">
+      <div class="col">
+    
       <label for="city-search">Search</label>
     <input type="search" class="form-control" id="exampleInputPlace" style="width: 20vw;" aria-describedby="emailHelp" placeholder="Search">
     <button type="submit" class="btn btn-primary" id="fetch-button">Submit</button>
@@ -18,34 +21,26 @@
       <div class="sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" href="">Birmingham</a>
+            <a class="nav-link" href="">Birmingham</a>
           </li>
-          <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-            <div class="sidebar-sticky">
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link active" href="">Birmingham</a>
-                </li>
-                <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                  <div class="sidebar-sticky">
-                    <ul class="nav flex-column">
-                      <li class="nav-item">
-                        <a class="nav-link active" href="">Birmingham</a>
-                      </li>
-                      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                        <div class="sidebar-sticky">
-                          <ul class="nav flex-column">
-                            <li class="nav-item">
-                              <a class="nav-link active" href="">Birmingham</a>
-                            </li>
-                            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                              <div class="sidebar-sticky">
-                                <ul class="nav flex-column">
-                                  <li class="nav-item">
-                                    <a class="nav-link active" href="">Birmingham</a>
-                                  </li>
-                                  <div class="card" style="width: 60vw; height: 50vh; margin-left: 75vh; margin-bottom: 50vh;">
-                                    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+          <li class="nav-item">
+            <a class="nav-link" href="">Spain</a> </li>
+            <li class ="nav-item">
+              <a class="nav-link" href="">Portugal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Tenerife</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Tenerife</a>
+            </div>
+              </li>
+        </ul>
+        <div class="row align-items end">
+          <div class="col">
+        
+        <div class="card" style="width: 60vw; height: 50vh; margin-left: 70vh; margin-bottom: 10vh;">
+                    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
                                     <div class="card-body">
                                       <h5 class="card-title">Card title</h5>
                                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -54,6 +49,7 @@
                                   </div>
                                   </div>
                                   </div>
+                                </div>
         </ul>
         </nav>
       </nav>
@@ -90,4 +86,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+<script src="./assets/script.js"></script>
 </html>

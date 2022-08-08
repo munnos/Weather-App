@@ -42,7 +42,7 @@ function getcityApi() {
                console.log(lat);
                console.log(lon);
 
-               var urlforcityData = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + "&exclude=minutely,hourly,daily,alerts,&appid=d2d3af92279205e005384f665435892b";
+               var urlforcityData = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + "&exclude=minutely,hourly,daily,&appid=d2d3af92279205e005384f665435892b";
 
                fetch(urlforcityData)
                .then(function (response) {
@@ -53,13 +53,21 @@ function getcityApi() {
                 console.log(data);
                 for (var i = 0; i < data.length; index++) {
 
-                    var windSpeed = data[0].wind_speed;
-                    var humidity = data[0].humidity;
-                    var uvi = data[0].uvi;
+                    var windSpeed = data.weather.wind.speed;
+                    var humidity = data.list.main.humidity;
+                    var uvi = data.weather.uvi;
+                    var temp = data.list.main.temp;
 
-    
-                    
+                    console.log(windSpeed);
+                    console.log(humidity);
+                    console.log(uvi);
+                    console.log(temp);
+
                 }
+
+                   
+    
+                
                 
                
                })

@@ -61,7 +61,7 @@ function getcityApi() {
             console.log(data);
             var day = new Date().toLocaleDateString();
             var cityandDate = document.querySelector("#city-and-date");
-            cityandDate.innerHTML=`${placesearchValue} (${day})`
+            cityandDate.innerHTML=`${placesearchValue} (${day})`;
             console.log(placesearchValue);
             var temp = document.querySelector("#temp");
             temp.innerHTML=`Temp: ${data.current.temp}C`;
@@ -83,6 +83,9 @@ function getcityApi() {
 
             uv.innerHTML=`UV: ${data.current.uvi}`;
             // uv.style.color="red";
+
+            var day1 = document.querySelector("#day-1");
+            day1.innerHTML=""
             
 
            

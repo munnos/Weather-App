@@ -84,8 +84,16 @@ function getcityApi() {
             uv.innerHTML=`UV: ${data.current.uvi}`;
             // uv.style.color="red";
 
-            var day1 = document.querySelector("#day-1");
-            day1.innerHTML=""
+            // var day1 = document.querySelector("#day-1");
+            // day1.innerHTML=""
+
+            var day1Temp = document.querySelector("#day1-temp");
+
+            day1Temp.innerHTML=`Temp: ${data.daily[0].temp.day}C`;
+
+          
+
+
             
 
            

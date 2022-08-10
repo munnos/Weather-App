@@ -232,23 +232,36 @@ function getcityApi() {
   for (var i = 0; i < cityButtons.length; i++) {
     cityButtons[i].addEventListener("click", function () {
 
-      var cityName = placesearch.value;
+      getcityApi();
+      getcitylocalstorageData();
 
-      cityNames.push(cityName);
-      localStorage.setItem("City Names", JSON.stringify(cityNames));
+      // var cityName = placesearch.value;
 
-      console.log(cityNames);
+      // cityNames.push(cityName);
+      // localStorage.setItem("City Names", JSON.stringify(cityNames));
 
-      for (var i = 0; i < cityNames.length; i++) {
+      // console.log(cityNames);
 
-        cityButtons.innerHTML = cityNames[i];
+      // for (var i = 0; i < cityNames.length; i++) {
+
+      //   cityButtons.innerHTML = cityNames[i];
     
 
-    }})};     
+    })};    
   
+function getcitylocalstorageData () {
+    var cityName = placesearch.value;
 
+    cityNames.push(cityName);
+    localStorage.setItem("City Names", JSON.stringify(cityNames));
 
+    console.log(cityNames);
 
+    for (var i = 0; i < cityNames.length; i++) {
+
+      cityButtons.innerHTML = cityNames[i];
+
+    }};
 
   
     

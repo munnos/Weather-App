@@ -87,9 +87,97 @@ function getcityApi() {
             // var day1 = document.querySelector("#day-1");
             // day1.innerHTML=""
 
-            var day1Temp = document.querySelector("#day1-temp");
+            // Rendering first day of forecast
 
-            day1Temp.innerHTML=`Temp: ${data.daily[0].temp.day}C`;
+            var day1forecastDate = document.querySelector("#day-1");
+
+            day1forecastDate.innerHTML=`Date: ${day + 1}`;
+
+            var day1Temp = document.querySelector("#day-1-temp");
+
+            day1Temp.innerHTML=`Temp: ${data.daily[1].temp.day}C`;
+
+            var day1Wind = document.querySelector("#day-1-wind");
+
+            day1Wind.innerHTML = `Wind Speed: ${data.daily[1].wind_speed}mph`;
+
+            var day1Humidity = document.querySelector("#day-1-humidity");
+
+            day1Humidity.innerHTML = `Humidity: ${data.daily[1].humidity}%`;
+
+            // Rendering second day of forecast
+
+            var day2Temp = document.querySelector("#day-2-temp");
+
+            day2Temp.innerHTML = `Temp: ${data.daily[2].temp.day}C`;
+
+            var day2Wind = document.querySelector("#day-2-wind");
+
+            day2Wind.innerHTML = `Wind Speed: ${data.daily[2].wind_speed}mph`;
+
+            var day2Humidity = document.querySelector("#day-2-humidity");
+
+            day2Humidity.innerHTML = `Humidity: ${data.daily[2].humidity}%`;
+
+
+
+            // Rendering third day of forecast
+
+            var day3Temp = document.querySelector("#day-3-temp");
+
+            day3Temp.innerHTML=`Temp: ${data.daily[3].temp.day}C`;
+
+            var day3Wind = document.querySelector("#day-3-wind");
+
+            day3Wind.innerHTML = `Wind Speed: ${data.daily[3].wind_speed}mph`;
+
+            var day3Humidity = document.querySelector("#day-3-humidity");
+
+            day3Humidity.innerHTML = `Humidity: ${data.daily[3].humidity}%`;
+
+            // Rendering fourth day of forecast
+
+            var day4Temp = document.querySelector("#day-4-temp");
+
+            day4Temp.innerHTML=`Temp: ${data.daily[4].temp.day}C`;
+
+
+            var day4Wind = document.querySelector("#day-4-wind");
+
+            day4Wind.innerHTML = `Wind Speed: ${data.daily[4].wind_speed}mph`;
+
+            var day4Humidity = document.querySelector("#day-4-humidity");
+
+            day4Humidity.innerHTML = `Humidity: ${data.daily[4].humidity}%`;
+
+            // Rendering fifth day of forecast
+
+            var day5Temp = document.querySelector("#day-5-temp");
+
+            day5Temp.innerHTML=`Temp: ${data.daily[5].temp.day}C`;
+
+            var day5Wind = document.querySelector("#day-5-wind");
+
+            day5Wind.innerHTML = `Wind Speed: ${data.daily[5].wind_speed}mph`;
+
+            var day5Humidity = document.querySelector("#day-5-humidity");
+
+            day5Humidity.innerHTML = `Humidity: ${data.daily[5].humidity}%`;
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           
 

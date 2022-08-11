@@ -106,34 +106,47 @@ function getcityApi() {
             // localStorage.getItem(cityArray[0]);
             console.log(citydataArray);
 
+            for (var i = 0; i < citydataArray.length; i++) {
+              var cityList = document.querySelector(".sidebar-sticky");
+              var cityhistoryBtn = document.createElement('a');
+              var cityhistorybtnText = document.createTextNode(citydataArray[i].city);
+              cityhistoryBtn.appendChild(cityhistorybtnText);
+
+              cityList.appendChild(cityhistoryBtn);
+
+
+              
+            }
+
             
-            var searchhistoryCity1 = document.getElementById("city-search-history-1");
-            searchhistoryCity1.innerHTML = citydataArray[0].city;
+            // var searchhistoryCity1 = document.getElementById("city-search-history-1");
+            // searchhistoryCity1.innerHTML = citydataArray[0].city;
 
            
 
            
 
-            var searchhistoryCity1 = document.getElementById("city-search-history-2");
-            searchhistoryCity1.innerHTML = citydataArray[1].city;
+            // var searchhistoryCity1 = document.getElementById("city-search-history-2");
+            // searchhistoryCity1.innerHTML = citydataArray[1].city;
 
           
 
            
 
-            var searchhistoryCity1 = document.getElementById("city-search-history-3");
-            searchhistoryCity1.innerHTML = citydataArray[2].city;
+            // var searchhistoryCity1 = document.getElementById("city-search-history-3");
+            // searchhistoryCity1.innerHTML = citydataArray[2].city;
            
 
            
-            var searchhistoryCity1 = document.getElementById("city-search-history-4");
-            searchhistoryCity1.innerHTML = citydataArray[3].city;
+            // var searchhistoryCity1 = document.getElementById("city-search-history-4");
+            // searchhistoryCity1.innerHTML = citydataArray[3].city;
 
          
         
 
-            var searchhistoryCity1 = document.getElementById("city-search-history-5");
-            searchhistoryCity1.innerHTML = citydataArray[4].city;
+            // var searchhistoryCity1 = document.getElementById("city-search-history-5");
+            // searchhistoryCity1.innerHTML = citydataArray[4].city;
+            // console.log(citydataArray);
           
 
         

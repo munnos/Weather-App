@@ -13,7 +13,7 @@
 
 var fetchButton = document.getElementById("fetch-button");
 var placesearch = document.getElementById("place-input");
-var cityNames = JSON.parse(localStorage.getItem("cityNames")) || [];
+
 
 
 // cityButtons.addEventListener("click", getcitylocalstorageData);
@@ -69,7 +69,7 @@ function getcityApi() {
             var cityandDate = document.querySelector("#city-and-date");
             cityandDate.innerHTML=`${placesearchValue} (${day})`;
             console.log(placesearchValue);
-            localStorage.setItem('city', placesearchValue);
+            // localStorage.setItem('city', placesearchValue);
             var temp = document.querySelector("#temp");
             temp.innerHTML=`Temp: ${data.current.temp}C`;
 
@@ -89,6 +89,26 @@ function getcityApi() {
             }
 
             uv.innerHTML=`UV: ${data.current.uvi}`;
+
+            var cityData = {
+              city: placesearch.value,
+              day: new Date().toLocaleDateString(),
+              temp: data.current.temp,
+              windspeed: data.current.wind_speed,
+              humid: data.current.humidity,
+            }
+            var citydataArray = [];
+
+            localStorage.setItem('cityData', JSON.stringify(cityData));
+            
+            citydataArray.push(cityData);
+            console.log(citydataArray);
+
+
+
+
+          
+
 
             // Rendering first day of forecast
 
@@ -223,45 +243,46 @@ function getcityApi() {
 
             day5Humidity.innerHTML = `Humidity: ${data.daily[5].humidity}%`;
 
-          });
-      }
-    });
-}
+          }
+      )}})};
+//     });
+// }
 
-  var cityButtons = document.getElementsByClassName("nav-link");
-  for (var i = 0; i < cityButtons.length; i++) {
-    cityButtons[i].addEventListener("click", function () {
+//   var cityButtons = document.getElementsByClassName("nav-link");
+//   for (var i = 0; i < cityButtons.length; i++) {
+//     cityButtons[i].addEventListener("click", function () {
 
-      getcityApi();
-      getcitylocalstorageData();
+//       getcityApi();
+//       getcitylocalstorageData();
 
-      // var cityName = placesearch.value;
+//       // var cityName = placesearch.value;
 
-      // cityNames.push(cityName);
-      // localStorage.setItem("City Names", JSON.stringify(cityNames));
+//       // cityNames.push(cityName);
+//       // localStorage.setItem("City Names", JSON.stringify(cityNames));
 
-      // console.log(cityNames);
+//       // console.log(cityNames);
 
-      // for (var i = 0; i < cityNames.length; i++) {
+//       // for (var i = 0; i < cityNames.length; i++) {
 
-      //   cityButtons.innerHTML = cityNames[i];
+//       //   cityButtons.innerHTML = cityNames[i];
     
 
-    })};    
+//     })};    
   
-function getcitylocalstorageData () {
-    var cityName = placesearch.value;
+// function getcitylocalstorageData () {
+  
+//   var cityName = JSON.parse(localStorage.getitem("city"));
 
-    cityNames.push(cityName);
-    localStorage.setItem("City Names", JSON.stringify(cityNames));
+//     cityNames.push(cityName);
+//     localStorage.setItem("City Names", JSON.stringify(cityNames));
 
-    console.log(cityNames);
+//     console.log(cityNames);
 
-    for (var i = 0; i < cityNames.length; i++) {
+//     for (var i = 0; i < cityNames.length; i++) {
 
-      cityButtons.innerHTML = cityNames[i];
+//       cityButtons.innerHTML = cityNames[i];
 
-    }};
+//     }};
 
   
     

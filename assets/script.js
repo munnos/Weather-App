@@ -116,7 +116,7 @@ function getcityApi() {
                 document.querySelector("#city-and-date").innerHTML =
                 event.target.textContent.trim();
                 getcityApi(event.target.textContent);
-              })}
+              })
 
               cityList.appendChild(cityhistoryBtn);
             
@@ -124,7 +124,7 @@ function getcityApi() {
 
 
               
-            })
+            }
 
             
             // var searchhistoryCity1 = document.getElementById("city-search-history-1");
@@ -304,7 +304,7 @@ function getcityApi() {
 
             day5Humidity.innerHTML = `Humidity: ${data.daily[5].humidity}%`;
 
-    }})}
+    })}})}
       // )}})};
 //     });
 // }

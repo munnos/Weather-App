@@ -9,34 +9,17 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-  <header class="header">Weather Dashboard</header>
+  <header id="header">Weather Dashboard</header>
   <div class="container-fluid">
     <div>
       <label for="city-search">Search</label>
     <input type="search" class="form-control" id="place-input" style="width: 20vw;" aria-describedby="emailHelp" placeholder="Search">
     <button type="submit" class="btn btn-primary" id="fetch-button">Submit</button>
-    <!-- <nav class="col-md-2 d-none d-md-bg-light sidebar"> -->
+    
       <div class="row">
       <div class="sidebar-sticky">
         <ul id="list-for-cities"></ul>
       </div>
-        <!-- <ul class="nav flex-column"> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link" id="city-search-history-1"></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="city-search-history-2"></a> </li>
-            <li class ="nav-item">
-              <a class="nav-link" id="city-search-history-3"></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="city-search-history-4"></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="city-search-history-5"></a>
-            </div>
-              </li> -->
-
         </ul>
         </nav>
         <div class="card" style="width: 25rem; margin-left: 30vw; margin-bottom: 40vh">
@@ -66,7 +49,7 @@
   
 
   <div class="container m-0 p-0">
-    <div> 5 day forecast</div>
+    <div id="five-day-forecast-banner"> 5 day forecast</div>
   <div class="row" style="margin-left: 60vh; margin-top: 10vh;">
   <div class="col-2">
   <li id="day-1"></li>

@@ -1,15 +1,3 @@
-// API data need to get:
-
-// City
-// Date
-// icon rep of weather conditions
-// temperature
-// humidity
-// wind speed
-// UV index
-// 5 day forecast for all of the above
-
-// variables
 
 var fetchButton = document.getElementById("fetch-button");
 var placesearch = document.getElementById("place-input");
@@ -18,12 +6,12 @@ var day = new Date().toLocaleDateString();
 
 
 
-// cityButtons.addEventListener("click", getcitylocalstorageData);
+
 
 fetchButton.addEventListener("click", getcityApi);
 
 function getcityApi() {
-  // function init() {
+ 
   var placesearchValue = document.getElementById("place-input").value;
 
   var requestUrl =
@@ -33,11 +21,7 @@ function getcityApi() {
 
   console.log(requestUrl);
 
-  
 
- 
-
-// console.log(day);
 
 
 
@@ -100,9 +84,10 @@ function getcityApi() {
             
             }
            
-            
+           if (cityArray.includes === cityArray.city) { 
             citydataArray.push(cityArray);
             localStorage.setItem('city', JSON.stringify(cityArray));
+           }
 
             // localStorage.getItem(cityArray[0]);
             console.log(citydataArray);
@@ -116,6 +101,8 @@ function getcityApi() {
                 document.querySelector("#city-and-date").innerHTML =
                 event.target.textContent.trim();
                 getcityApi(event.target.textContent);
+                // cityhistoryBtn.textContent = "";
+                
               })
 
               cityList.appendChild(cityhistoryBtn);
@@ -127,48 +114,6 @@ function getcityApi() {
             }
 
             
-            // var searchhistoryCity1 = document.getElementById("city-search-history-1");
-            // searchhistoryCity1.innerHTML = citydataArray[0].city;
-
-           
-
-           
-
-            // var searchhistoryCity1 = document.getElementById("city-search-history-2");
-            // searchhistoryCity1.innerHTML = citydataArray[1].city;
-
-          
-
-           
-
-            // var searchhistoryCity1 = document.getElementById("city-search-history-3");
-            // searchhistoryCity1.innerHTML = citydataArray[2].city;
-           
-
-           
-            // var searchhistoryCity1 = document.getElementById("city-search-history-4");
-            // searchhistoryCity1.innerHTML = citydataArray[3].city;
-
-         
-        
-
-            // var searchhistoryCity1 = document.getElementById("city-search-history-5");
-            // searchhistoryCity1.innerHTML = citydataArray[4].city;
-            // console.log(citydataArray);
-          
-
-        
-        
-
-          
-  
-
-            // console.log(cityArray);
-
-
-
-
-          
 
 
             // Rendering first day of forecast
@@ -305,46 +250,4 @@ function getcityApi() {
             day5Humidity.innerHTML = `Humidity: ${data.daily[5].humidity}%`;
 
     })}})}
-      // )}})};
-//     });
-// }
-
-//   var cityButtons = document.getElementsByClassName("nav-link");
-//   for (var i = 0; i < cityButtons.length; i++) {
-//     cityButtons[i].addEventListener("click", function () {
-
-//       getcityApi();
-//       getcitylocalstorageData();
-
-//       // var cityName = placesearch.value;
-
-//       // cityNames.push(cityName);
-//       // localStorage.setItem("City Names", JSON.stringify(cityNames));
-
-//       // console.log(cityNames);
-
-//       // for (var i = 0; i < cityNames.length; i++) {
-
-//       //   cityButtons.innerHTML = cityNames[i];
-    
-
-//     })};    
-  
-// function getcitylocalstorageData () {
-  
-//   var cityName = JSON.parse(localStorage.getitem("city"));
-
-//     cityNames.push(cityName);
-//     localStorage.setItem("City Names", JSON.stringify(cityNames));
-
-//     console.log(cityNames);
-
-//     for (var i = 0; i < cityNames.length; i++) {
-
-//       cityButtons.innerHTML = cityNames[i];
-
-//     }};
-
-  
-    
-  
+     

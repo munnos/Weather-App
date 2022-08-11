@@ -9,3 +9,18 @@
 
     margin-right: 30px;
 }
+
+#header {
+
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+
+#five-day-forecast-banner {
+
+    background-color: blue;
+    color: white;
+    text-align: center;
+    width: 100vw;
+}

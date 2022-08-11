@@ -14,6 +14,7 @@
 var fetchButton = document.getElementById("fetch-button");
 var placesearch = document.getElementById("place-input");
 var citydataArray = [];
+var day = new Date().toLocaleDateString();
 
 
 
@@ -47,8 +48,8 @@ function getcityApi() {
     .then(function (data) {
       console.log(data);
       for (var i = 0; i < data.length; i++) {
-        var lat = data[0].lat;
-        var lon = data[0].lon;
+        var lat = data[i].lat;
+        var lon = data[i].lon;
 
         console.log(lat);
         console.log(lon);
@@ -107,16 +108,23 @@ function getcityApi() {
             console.log(citydataArray);
 
             for (var i = 0; i < citydataArray.length; i++) {
-              var cityList = document.querySelector(".sidebar-sticky");
-              var cityhistoryBtn = document.createElement('a');
+              var cityList = document.querySelector("#list-for-cities");
+              var cityhistoryBtn = document.createElement('li');
               var cityhistorybtnText = document.createTextNode(citydataArray[i].city);
               cityhistoryBtn.appendChild(cityhistorybtnText);
+              cityhistoryBtn.addEventListener("click",(event) => {
+                document.querySelector("#city-and-date").innerHTML =
+                event.target.textContent.trim();
+                getcityApi(event.target.textContent);
+              })}
 
               cityList.appendChild(cityhistoryBtn);
+            
+              
 
 
               
-            }
+            })
 
             
             // var searchhistoryCity1 = document.getElementById("city-search-history-1");
@@ -155,7 +163,7 @@ function getcityApi() {
           
   
 
-            console.log(cityArray);
+            // console.log(cityArray);
 
 
 
@@ -296,8 +304,8 @@ function getcityApi() {
 
             day5Humidity.innerHTML = `Humidity: ${data.daily[5].humidity}%`;
 
-          }
-      )}})};
+    }})}
+      // )}})};
 //     });
 // }
 

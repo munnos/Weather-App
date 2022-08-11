@@ -11,13 +11,15 @@
 <body>
   <header class="header">Weather Dashboard</header>
   <div class="container-fluid">
-    
+    <div>
       <label for="city-search">Search</label>
     <input type="search" class="form-control" id="place-input" style="width: 20vw;" aria-describedby="emailHelp" placeholder="Search">
     <button type="submit" class="btn btn-primary" id="fetch-button">Submit</button>
     <!-- <nav class="col-md-2 d-none d-md-bg-light sidebar"> -->
       <div class="row">
       <div class="sidebar-sticky">
+        <ul id="list-for-cities"></ul>
+      </div>
         <!-- <ul class="nav flex-column"> -->
           <!-- <li class="nav-item">
             <a class="nav-link" id="city-search-history-1"></a>

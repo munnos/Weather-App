@@ -13,6 +13,7 @@
 
 var fetchButton = document.getElementById("fetch-button");
 var placesearch = document.getElementById("place-input");
+var citydataArray = [];
 
 
 
@@ -21,6 +22,7 @@ var placesearch = document.getElementById("place-input");
 fetchButton.addEventListener("click", getcityApi);
 
 function getcityApi() {
+  // function init() {
   var placesearchValue = document.getElementById("place-input").value;
 
   var requestUrl =
@@ -89,20 +91,58 @@ function getcityApi() {
             }
 
             uv.innerHTML=`UV: ${data.current.uvi}`;
-
-            var cityData = {
-              city: placesearch.value,
-              day: new Date().toLocaleDateString(),
-              temp: data.current.temp,
-              windspeed: data.current.wind_speed,
-              humid: data.current.humidity,
-            }
-            var citydataArray = [];
-
-            localStorage.setItem('cityData', JSON.stringify(cityData));
             
-            citydataArray.push(cityData);
+            var cityArray = {
+              city: placesearch.value,
+              latitude: lat.value,
+              longitude: lon.value,
+            
+            }
+           
+            
+            citydataArray.push(cityArray);
+            localStorage.setItem('city', JSON.stringify(cityArray));
+
+            // localStorage.getItem(cityArray[0]);
             console.log(citydataArray);
+
+            
+            var searchhistoryCity1 = document.getElementById("city-search-history-1");
+            searchhistoryCity1.innerHTML = citydataArray[0].city;
+
+           
+
+           
+
+            var searchhistoryCity1 = document.getElementById("city-search-history-2");
+            searchhistoryCity1.innerHTML = citydataArray[1].city;
+
+          
+
+           
+
+            var searchhistoryCity1 = document.getElementById("city-search-history-3");
+            searchhistoryCity1.innerHTML = citydataArray[2].city;
+           
+
+           
+            var searchhistoryCity1 = document.getElementById("city-search-history-4");
+            searchhistoryCity1.innerHTML = citydataArray[3].city;
+
+         
+        
+
+            var searchhistoryCity1 = document.getElementById("city-search-history-5");
+            searchhistoryCity1.innerHTML = citydataArray[4].city;
+          
+
+        
+        
+
+          
+  
+
+            console.log(cityArray);
 
 
 
